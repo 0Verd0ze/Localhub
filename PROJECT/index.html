@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalHub | Connect Locally</title>
+    <link rel="icon" href="localhub.png" type="image/x-icon">
+    <script src="path/to/your/function.js"></script>
+    <style>
+        /* ==== CSS Variables ==== */
+        :root {
+            --primary-blue: #2A5C82;
+            --secondary-blue: #E8F4F8;
+            --accent-coral: #FF6B6B;
+            --font-helvetica: Helvetica, Arial, sans-serif;
+        }
+
+        /* ==== Base Styles ==== */
+        body {
+            font-family: var(--font-helvetica);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ==== Navbar ==== */
+        .navbar {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .cta-button {
+            background: var(--accent-coral);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* ==== Hero Section ==== */
+        .hero {
+            position: relative;
+            text-align: left;
+            padding: 8rem 5%; /* Increased vertical padding */
+            min-height: 60vh; /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('matheusferrero.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3; /* Adjust opacity (0-1) */
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            max-width: 600px;
+            margin-left: 5%;
+            margin-bottom: 1rem;
+            color: var(--primary-blue); /* Ensures text visibility */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5); /* Helps text stand out */
+        }
+
+        .hero p {
+            margin-left: 5%;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            font-size: 1.2rem;
+        }
+
+        .location-search {
+            margin-left: 5%;
+        }
+
+
+        .location-search {
+            padding: 1rem;
+            width: 300px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            margin-top: 1rem;
+        }
+
+        /* ==== Features Grid ==== */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature:nth-child(1) .feature-icon {
+            background-image: url('local_matching.gif');
+        }
+
+        .feature:nth-child(2) .feature-icon {
+            background-image: url('community-events.gif');
+        }
+
+        .feature:nth-child(3) .feature-icon {
+            background-image: url('safe-verified.gif');
+        }
+
+        /* ==== Testimonials ==== */
+        .testimonials {
+            background: var(--secondary-blue);
+            padding: 3rem 5%;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        /* ==== Signup Form ==== */
+        .signup-form {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"] {
+            padding: 0.8rem;
+            margin: 0.5rem;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            width: 300px;
+        }
+
+        /* ==== Responsive Design ==== */
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">LocalHub</div>
+        <a href="#" class="cta-button">Join LocalHub</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find Friends Near You 🌍</h1>
+        <p>Connect with locals who share your hobbies and values</p>
+        <input type="text" class="location-search" placeholder="Enter your city or ZIP code" style="margin-left: 5%; font-size: 1rem;">
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon"></div> <!-- Keep this as-is -->
+            <h3>Local Matching</h3>
+            <p>Meet people within 10 miles of your location</p>
+          </div>
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <h3>Community Events</h3>
+            <p>Join billiards groups, <i>kapehan</i>, and more</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <h3>Safe & Verified</h3>
+            <p>All profiles manually reviewed</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonial-card">
+            <p>"Found my weekend billiards crew through LocalHub!" - Megan, 22</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"Finally people who love coffee as much as I do!" - Sam, 24</p>
+        </div>
+        <div class="testimonial-card">
+            <p><i>"Nakapag-study kami together!"</i> - Alex, 22</p>
+        </div>
+        <div class="testimonial-card">
+            <p><i>"Shout out sa mga may exam pero tagay an review. HAHAH"</i> - Dan, 23</p>
+    </section>
+
+    <!-- Signup Form -->
+    <section class="signup-form">
+        <h2>Start Connecting</h2>
+        <form>
+            <input type="text" placeholder="Your Name"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="text" placeholder="Your Location"><br>
+            <input type="text" placeholder="Interests (e.g., cooking, sports)"><br>
+            <button class="cta-button" type="submit">Create Free Profile</button>
+        </form>
+    </section>
+<script>
+    // ==== Form Handling ====
+    document.querySelector('.signup-form form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.querySelector('input[placeholder="Your Name"]').value;
+        const email = document.querySelector('input[placeholder="Email"]').value;
+        
+        if (name && email) {
+            alert(`Thanks for signing up, ${name}! We've sent a confirmation to ${email}`);
+            this.reset();
+        } else {
+            alert('Please fill in required fields');
+        }
+    });
+
+    // ==== Location Search ====
+    const locationSearch = document.querySelector('.location-search');
+    locationSearch.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            alert(`Searching for local connections in: ${this.value}`);
+        }
+    });
+
+    // ==== Testimonial Carousel ====
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    
+    function showTestimonial(index) {
+        testimonials.forEach((card, i) => {
+            card.style.display = i === index ? 'block' : 'none';
+        });
+    }
+    
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 5000);
+
+    // Initialize first testimonial
+    showTestimonial(0);
+
+    // ==== Smooth Scroll ====
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // ==== CTA Button Animation ====
+    document.querySelector('.cta-button').addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.05)';
+    });
+    
+    document.querySelector('.cta-button').addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1)';
+    });
+</script>
+</body>
+</html>
